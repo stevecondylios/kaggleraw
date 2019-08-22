@@ -1,0 +1,2 @@
+class Kaggle < ApplicationRecord
+end

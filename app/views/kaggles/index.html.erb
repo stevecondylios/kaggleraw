@@ -1,0 +1,18 @@
+
+
+
+
+<%= form_for(@kaggle) do |f| %>
+<%= f.text_field :link %><br>
+<%= f.submit "Get raw kaggle notebook code" %>
+<% end %>
+
+<!-- Display code here -->
+<br>
+<div class="highlight">
+<% if !@code.nil? %>
+<%= raw @code %> <br>
+<% end %>
+</div>
+
+
