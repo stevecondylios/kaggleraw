@@ -3,16 +3,17 @@
 
 
 <%= form_for(@kaggle) do |f| %>
-<%= f.text_field :link %><br>
+<%= f.text_field :link, placeholder: "Enter notebook url" %><br>
 <%= f.submit "Get raw kaggle notebook code" %>
 <% end %>
 
 <!-- Display code here -->
 <br>
+<span class="courier">
 <div class="highlight">
 <% if !@code.nil? %>
 <%= raw @code %> <br>
 <% end %>
 </div>
-
+</span>
 
