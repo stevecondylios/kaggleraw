@@ -1,5 +1,5 @@
 class KagglesController < ApplicationController
-  include KagglesHelper
+  
 
 
 
@@ -28,11 +28,6 @@ class KagglesController < ApplicationController
 
 
  
-
-
-
-
-
   end
 
 
