@@ -4,6 +4,7 @@ class KagglesController < ApplicationController
 
 
   def index
+
     @kaggle = Kaggle.new
     @code = Kaggle.last.code
     language = Kaggle.last.language # Only used here for formatting
@@ -22,8 +23,6 @@ class KagglesController < ApplicationController
           lexer = Rouge::Lexers::Python.new
           @code = formatter.format(lexer.lex(source)) 
         end
-
-
       end
 
 

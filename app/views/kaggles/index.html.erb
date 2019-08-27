@@ -6,16 +6,11 @@
 <%= f.text_field :link, placeholder: "Enter notebook url" %><br>
 <%= f.submit "Get raw kaggle notebook code" %>
 <% end %>
-
-<!-- Display code here -->
 <br>
-<span class="courier">
+<!-- Display code here -->
   <!-- highlight is for rouge gem to give code highlighting. due_regard is defined by me so rmarkdown renders /n correctly https://stackoverflow.com/questions/9492249/render-a-string-in-html-and-preserve-spaces-and-linebreaks -->
-
-<div class="highlight due_regard"> 
-<% if !@code.nil? %>
-<%= raw @code %> <br>
-<% end %>
+<span class="courier">
+  <div class="highlight due_regard"><% if !@code.nil? %><%= raw @code %><br><% end %>
 </div>
 </span>
 
