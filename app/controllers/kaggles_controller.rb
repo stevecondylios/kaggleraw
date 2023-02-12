@@ -6,8 +6,9 @@ class KagglesController < ApplicationController
   def index
 
     @kaggle = Kaggle.new
-    @code = Kaggle.last.code
-    language = Kaggle.last.language # Only used here for formatting
+    if Kaggle.count > 0 
+      @code = Kaggle.last.code
+      language = Kaggle.last.language # Only used here for formatting
     
       if !@code.nil?
           require 'rouge'
@@ -24,6 +25,7 @@ class KagglesController < ApplicationController
           @code = formatter.format(lexer.lex(source)) 
         end
       end
+    end
 
 
  
